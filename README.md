@@ -35,3 +35,22 @@
 3. 実行
 
    [`Assets/AMI/PythonSampleScript/unity_mlagents_gym_interaction.py`](Assets/AMI/PythonSampleScript/unity_mlagents_gym_interaction.py)を実行する。実行方法に関してはファイルに記載しているのでそこを確認。
+
+## Unityの `Project Settings` 重要項目
+
+メニュバーの`Edit` -> `Project Settings...`から開く。
+
+### `Time`
+
+Fixed Timestampを `0.01`に設定する。この値が `Decision Requester`の`Decision Period`の最小周期になる。
+
+例えば `Decision Period`を`10`に設定すると、Python上では10fpsでインタラクションが実行される。
+
+### `Player`
+
+`Resolution and Presentation`の中で、次の項目を必ず設定する。
+
+* `Run In Background`: チェックする。
+* `Fullscreen Mode`: `Windowed`
+
+`Standalone Player Options`の`Resizable Window`もチェックしておくとデバッグを行いやすい。
