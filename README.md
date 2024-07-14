@@ -7,7 +7,7 @@
 ### OS
 
 * MacOS
-* Linux (2024/07/14 未検証)
+* Linux
 * Windows (2024/07/14 未検証。動作するはず。)
 
 ### Unity
