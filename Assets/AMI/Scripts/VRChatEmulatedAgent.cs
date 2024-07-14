@@ -2,7 +2,33 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 
-namespace AMI {
+namespace AMI
+{
+    /// <summary>
+    /// VRChatEmulatedAgent クラス
+    /// 
+    /// 使用方法:
+    /// 1. このスクリプトをUnityプロジェクト内の空のGameObjectにアタッチします。
+    /// 2. インスペクターで以下のパラメータを設定します：
+    ///    - Move Speed: エージェントの移動速度
+    ///    - Rotation Speed: エージェントの回転速度
+    ///    - Jump Speed: ジャンプの強さ
+    ///    - Dash Multiplier: ダッシュ時の速度倍率
+    ///    - Gravity: 重力の強さ（通常は負の値）
+    ///    - Spawn Point: エージェントのスポーン位置（設定しない場合、初期位置が使用されます）
+    /// 3. ML-Agents TrainingまたはInference modeで実行します。
+    /// 
+    /// 機能:
+    /// - WASQキーによる移動
+    /// - 左右矢印キーによる回転
+    /// - スペースキーでジャンプ
+    /// - Shiftキーでダッシュ
+    /// - 自動的に地面との衝突判定と重力の適用
+    /// 
+    /// 注意:
+    /// - CharacterControllerコンポーネントが自動的に追加されます。
+    /// - ML-Agents環境での学習用に設計されていますが、手動制御も可能です。
+    /// </summary>
     [RequireComponent(typeof(CharacterController))]
     public class VRChatEmulatedAgent : Agent
     {
@@ -22,8 +48,9 @@ namespace AMI {
         void Start()
         {
             controller = GetComponent<CharacterController>();
-            
-            if (spawnPoint == null){
+
+            if (spawnPoint == null)
+            {
                 spawnPoint = transform;
             }
         }
@@ -93,7 +120,8 @@ namespace AMI {
         }
 
 
-        private void Respawn(){
+        private void Respawn()
+        {
             transform.position = spawnPoint.position;
             transform.rotation = spawnPoint.rotation;
         }
@@ -175,7 +203,8 @@ namespace AMI {
                 jumpPushed = true;
             }
 
-            if (jumpPushed && !jump){
+            if (jumpPushed && !jump)
+            {
                 jumpPushed = false;
             }
 
