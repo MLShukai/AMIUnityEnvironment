@@ -32,6 +32,12 @@
    pip install mlagents-envs==1.0.0
    ```
 
+   **NOTE 2024/7/23: Windowsユーザはnumpyのインストールに失敗するため、次のコマンドでインストールしてください。**
+
+   ```bash
+   pip install git+https://github.com/MLShukai/ml-agents.git#subdirectory=ml-agents-envs
+   ```
+
 3. 実行
 
    [`Assets/AMI/PythonSampleScript/unity_mlagents_gym_interaction.py`](Assets/AMI/PythonSampleScript/unity_mlagents_gym_interaction.py)を実行する。実行方法に関してはファイルに記載しているのでそこを確認。
