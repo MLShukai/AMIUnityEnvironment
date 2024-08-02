@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1589705762545984146}
   - component: {fileID: 1589705762545984147}
   - component: {fileID: 1589705762545984144}
-  - component: {fileID: 1589705762545984145}
-  - component: {fileID: 1589705762545984158}
+  - component: {fileID: 6806720858522117157}
   m_Layer: 0
   m_Name: FlickerImage
   m_TagString: Untagged
@@ -28,12 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589705762545984159}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1589705762545984146
 MeshFilter:
@@ -54,10 +54,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +87,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1589705762545984144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -90,13 +96,21 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589705762545984159}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1589705762545984145
+--- !u!114 &6806720858522117157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,54 +119,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1589705762545984159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d2da72d8c6a4d4db1f5b7dec7e57a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 27620f0e4cd30e14e948ea34cbf10646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  _udonSharpBackingUdonBehaviour: {fileID: 1589705762545984158}
   _textureList:
+  - {fileID: 2800000, guid: e2b38b1b8616d184092a45f7012c6439, type: 3}
+  - {fileID: 2800000, guid: 1207bcbb3e386994b990e3a291d39290, type: 3}
+  - {fileID: 2800000, guid: 5d1d7017f715de140bf5fa88f47c5c55, type: 3}
+  - {fileID: 2800000, guid: 593fe4b1e4b4ada4aa1ee307d769eb1d, type: 3}
+  - {fileID: 2800000, guid: c6e90a80b2e0e9b438ddd81adc3bdbf7, type: 3}
+  - {fileID: 2800000, guid: 1579701272b70304c9c61949594ad07d, type: 3}
+  - {fileID: 2800000, guid: 46f665b08d211f74c8fe050ad9dbb3a0, type: 3}
+  - {fileID: 2800000, guid: 78d12261644925340ace2586c13e7dba, type: 3}
   - {fileID: 2800000, guid: fe2930bfbd53dbb4d914edcc4a572554, type: 3}
-  - {fileID: 2800000, guid: ef17f7aaa44632f4381ac43253223b64, type: 3}
   - {fileID: 2800000, guid: 17ebcb33d3d253d4ea14c453b4ffb9ed, type: 3}
-  - {fileID: 2800000, guid: caf73ab8ef5b26f48ab58a73a388ec10, type: 3}
-  - {fileID: 2800000, guid: 93d90b203d4429149bf4fd4881138d9f, type: 3}
-  - {fileID: 2800000, guid: 5653c69f3cbc978448c84c04ab924eb5, type: 3}
-  - {fileID: 2800000, guid: 524fbc6de459a444bba25418c6dd447a, type: 3}
-  - {fileID: 2800000, guid: 686d0629a4635d547891dbefe7f86936, type: 3}
-  - {fileID: 2800000, guid: 52f6edfa1e1a3b24a81e6ba991a38a51, type: 3}
-  - {fileID: 2800000, guid: 2f2255a88c06e8d40a4de48a1484a9af, type: 3}
-  _flickerPeriod: 0.1
---- !u!114 &1589705762545984158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589705762545984159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactTextPlacement: {fileID: 0}
-  interactText: Use
-  interactTextGO: {fileID: 0}
-  proximity: 2
-  SynchronizePosition: 0
-  AllowCollisionOwnershipTransfer: 0
-  Reliable: 0
-  _syncMethod: 2
-  serializedProgramAsset: {fileID: 11400000, guid: 00f3a2773b06c87498f7bf0774da100e,
-    type: 2}
-  programSource: {fileID: 11400000, guid: 4abf784fe3c7f3747b7da4282778035c, type: 2}
-  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
-  publicVariablesUnityEngineObjects: []
-  publicVariablesSerializationDataFormat: 0
+  _renderer: {fileID: 1589705762545984147}
