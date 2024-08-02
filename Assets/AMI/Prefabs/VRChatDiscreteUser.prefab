@@ -262,9 +262,9 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  moveSpeed: 5
-  rotationSpeed: 100
-  jumpSpeed: 5
+  moveSpeed: 2
+  rotationSpeed: 200
+  jumpSpeed: 2.5
   dashMultiplier: 2
   gravity: -9.81
   spawnPoint: {fileID: 0}

@@ -188,7 +188,7 @@ namespace AMI
             Vector3 movement = transform.right * moveHorizontal + transform.forward * moveVertical;
 
             // ダッシュ
-            if (jump)
+            if (run)
             {
                 movement *= dashMultiplier;
             }
