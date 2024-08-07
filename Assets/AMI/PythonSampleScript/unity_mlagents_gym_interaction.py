@@ -18,6 +18,28 @@ import time
 from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from mlagents_envs.side_channel.engine_configuration_channel import EngineConfigurationChannel
+from mlagents_envs.side_channel.side_channel import (
+    SideChannel,
+    IncomingMessage,
+    OutgoingMessage,
+)
+import uuid
+
+class TransformLogChannel(SideChannel):
+    def __init__(self, id):
+        super().__init__(id)
+
+    def on_message_received(self, msg: IncomingMessage):
+        value_list = msg.read_float32_list()
+        frame_count = value_list[0]
+        position_x = value_list[1]
+        position_y = value_list[2]
+        position_z = value_list[3]
+        euler_x = value_list[4]
+        euler_y = value_list[5]
+        euler_z = value_list[6]
+        format_string = f"{frame_count}, {position_x}, {position_y}, {position_z}, {euler_x}, {euler_y}, {euler_z}"
+        print(format_string)
 
 def main():
     if len(sys.argv) < 2:
@@ -28,10 +50,11 @@ def main():
     print(f"Unity環境ファイルパス: {unity_env_file_path}")
 
     engine_channel = EngineConfigurationChannel()
+    transform_log_channel = TransformLogChannel(uuid.UUID("621f0a70-4f87-11ea-a6bf-784f4387d1f7"))
     env = UnityToGymWrapper(
         UnityEnvironment(
             unity_env_file_path,
-            side_channels=[engine_channel],
+            side_channels=[engine_channel, transform_log_channel],
             no_graphics=False,
             worker_id=0
         )
