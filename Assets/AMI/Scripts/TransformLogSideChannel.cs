@@ -21,6 +21,7 @@ public class TransformLogSideChannel : SideChannel
     {
         var valueList = new List<float>();
         valueList.Add((float)Time.frameCount);
+        valueList.Add(Time.time);
         valueList.Add(transform.position.x);
         valueList.Add(transform.position.y);
         valueList.Add(transform.position.z);
