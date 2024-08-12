@@ -32,13 +32,14 @@ class TransformLogChannel(SideChannel):
     def on_message_received(self, msg: IncomingMessage):
         value_list = msg.read_float32_list()
         frame_count = value_list[0]
-        position_x = value_list[1]
-        position_y = value_list[2]
-        position_z = value_list[3]
-        euler_x = value_list[4]
-        euler_y = value_list[5]
-        euler_z = value_list[6]
-        format_string = f"{frame_count}, {position_x}, {position_y}, {position_z}, {euler_x}, {euler_y}, {euler_z}"
+        time = value_list[1]
+        position_x = value_list[2]
+        position_y = value_list[3]
+        position_z = value_list[4]
+        euler_x = value_list[5]
+        euler_y = value_list[6]
+        euler_z = value_list[7]
+        format_string = f"{frame_count}, {time}, {position_x}, {position_y}, {position_z}, {euler_x}, {euler_y}, {euler_z}"
         print(format_string)
 
 def main():
