@@ -328,8 +328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 3514114657103258074}
   m_SensorName: ViewPoint
-  m_Width: 84
-  m_Height: 84
+  m_Width: 144
+  m_Height: 144
   m_Grayscale: 0
   m_ObservationType: 0
   m_RuntimeCameraEnable: 0

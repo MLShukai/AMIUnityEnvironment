@@ -1098,6 +1098,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3514114657103258074, guid: 2368054a2d4064be1b6b6a34ae607282, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4591518545497047315, guid: 2368054a2d4064be1b6b6a34ae607282, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -1109,6 +1113,14 @@ PrefabInstance:
     - target: {fileID: 5477079736945798367, guid: 2368054a2d4064be1b6b6a34ae607282, type: 3}
       propertyPath: m_Name
       value: VRChatDiscreteUser
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614467168352529492, guid: 2368054a2d4064be1b6b6a34ae607282, type: 3}
+      propertyPath: m_Width
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614467168352529492, guid: 2368054a2d4064be1b6b6a34ae607282, type: 3}
+      propertyPath: m_Height
+      value: 144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
