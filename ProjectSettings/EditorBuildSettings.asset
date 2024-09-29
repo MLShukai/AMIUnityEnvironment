@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/AMI/Scenes/SimpleWorld.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/AMI/Scenes/MeshiTeroNoisyWorld.unity
     guid: 9c8efa54e8d17d34186686fe018839a0
+  - enabled: 1
+    path: Assets/AMI/Scenes/LastYearNoisyWorld.unity
+    guid: 356b9449994d6b9409e4098e649c0f1e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
